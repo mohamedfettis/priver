@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inverser les caractères</title>
+</head>
+<body>
+
+    <h2>Entrez du texte </h2>
+    <input type="text" id="inputText" placeholder="Tapez du texte ici">
+    <button onclick="inverserTexte()">Inverser</button>
+
+    <p id="outputText"></p>
+
+    <script>
+        function inverserTexte() {
+            // Récupère la valeur de l'input
+            let texte = document.getElementById("inputText").value;
+            // Inverse les caractères
+            let texteInverse = texte.split("").reverse().join("");
+            // Affiche le résultat inversé
+            document.getElementById("outputText").textContent = "Texte inversé : " + texteInverse;
+        }
+    </script>
+
+</body>
+</html>
